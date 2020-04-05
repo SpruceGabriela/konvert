@@ -1,8 +1,11 @@
 import React from 'react';
 
+import './global.css'
+import Conversor from './components/Conversor/Conversor';
+
 function App() {
   return (
-    <div>Titulo</div>
+    <Conversor/>
   );
 }
 
