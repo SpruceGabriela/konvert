@@ -1,0 +1,39 @@
+.information-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-group h1 {
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.information-total {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.currency-title {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totals {
+    margin: 10px 0 5px 0;
+}
+
+.totals p {
+    color: rgb(110, 110, 110);
+}
