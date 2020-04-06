@@ -16,8 +16,8 @@ form {
 }
 
 .input-group {
-    padding: 8px 0;
-    width: 70%;
+    padding: 20px 0;
+    width: 60%;
     
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@ form {
 @media(max-width:800px) {
     .input-group {
         padding: 8px 0;
-        width: 70%;
+        width: 60%;
         
         display: flex;
         justify-content: center;
