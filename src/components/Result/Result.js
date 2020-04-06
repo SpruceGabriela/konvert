@@ -6,7 +6,7 @@ import Usa from '../../assets/usa.png';
 import Brl from '../../assets/brazil.png';
 import Arrow from '../../assets/change.png';
 
-export default function Result() {
+export default function Result(props) {
     return (
         <div className="info-container">
             <section className="information-group">
