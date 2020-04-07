@@ -2,6 +2,8 @@
 
 Aplicação de conversão de montante em Dólar para Real.
 
+[Konvert](https://konvert.netlify.com/)
+
 ### Instalação
 
 Após clonar o repositório, rode ```npm install``` na raiz do projeto para instalar dependências
