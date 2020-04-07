@@ -5,8 +5,11 @@
     align-items: center;
 }
 
+.cotation-container h1 {color: #24a44d;}
+
 @media(max-width: 800px) {
     .cotation-container {
+        height: 200px;
         width: 100%;
         flex-direction: column;
         display: flex;

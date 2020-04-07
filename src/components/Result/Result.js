@@ -5,26 +5,15 @@ import './Result.css';
 import Usa from '../../assets/usa.png';
 import Brl from '../../assets/brazil.png';
 import Arrow from '../../assets/change.png';
+import MoneyUtil from '../../utils/moneyUtil';
 
 export default function Result(props) {
     const {amount, stateTax, cotation, tax} = props;
-
-    function getDollarWithTax(){
-        return amount + (amount * stateTax)/100;
-    }
-
-    function getRealWithoutTax(){
-        return amount * cotation;
-    }
-
-    function getRealWithTax(){
-        return (amount + (amount * tax)/100) * (cotation +(cotation * tax)/100)
-    }
     
     return (
         <div className="info-container">
             <section className="information-group">
-                <h1>IOF</h1>
+                <h1>IOF: {tax}%</h1>
                 <div className="information-total">
                    <div className="currency-title">
                     <img src={Usa} alt="Bandeira dos Estados Unidos"/>
@@ -32,8 +21,8 @@ export default function Result(props) {
                    </div>
 
                    <div className="totals">
-                        <p>Valor sem imposto: {amount}</p>
-                        <p>Valor com imposto: {getDollarWithTax()}</p>
+                        <p>Valor sem imposto: {MoneyUtil.formatUSDValue(amount)}</p>
+                        <p>Valor com imposto: {MoneyUtil.formatUSDValue(MoneyUtil.getDollarWithTax(amount, stateTax))}</p>
                     </div>
                 </div>
                 <img src={Arrow} alt="Conversão"/>
@@ -43,8 +32,8 @@ export default function Result(props) {
                     <p>Total em BRL:</p>
                    </div>
                    <div className="totals">
-                        <p>Valor sem imposto: {getRealWithoutTax()}</p>
-                        <p>Valor com imposto: {getRealWithTax()}</p>
+                        <p>Valor sem imposto: {MoneyUtil.formatBRLValue(MoneyUtil.getRealWithoutTax(amount, cotation))}</p>
+                        <p>Valor com imposto: {MoneyUtil.formatBRLValue(MoneyUtil.getRealWithTax(amount, tax, cotation))}</p>
                     </div>
                 </div>
             </section>
