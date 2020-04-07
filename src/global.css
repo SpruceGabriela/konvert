@@ -10,10 +10,13 @@
 
 body {
     font: 400 14px Roboto, sans-serif;
-    background: #f0f0f5;
     -webkit-font-smoothing: initialized;
-    background-image: linear-gradient(to right, rgb(141, 230, 141), rgb(208, 255, 208));
-
+    background-color: rgb(231, 231, 231);
+    background-image: url(./assets/wallet.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    backdrop-filter: saturate(0.8);
 }
 
 span, p, input, label {

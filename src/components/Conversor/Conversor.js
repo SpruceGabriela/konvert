@@ -6,9 +6,9 @@ import Form from '../Form/Form';
 import Result from '../Result/Result';
 
 import economyService from '../../services/economyService';
+import MoneyUtil from '../../utils/moneyUtil';
 import Input from '../Input/Input';
 import RadioButton from '../RadioButton/RadioButton';
-import Button from '../Button/Button';
 import Usa from '../../assets/usa.png';
 import Percent from '../../assets/percent.png'
 
@@ -32,11 +32,15 @@ export default function Conversor() {
     },[])
 
     const amountChangedHandler = e => {
-        setAmount(e.target.value);
+        if(e.target.value >= 0){
+            setAmount(e.target.value);
+        }
     }
 
     const iofChangedHandler = e => {
-        setStateTax(e.target.value);
+        if(e.target.value >= 0){
+            setStateTax(e.target.value);
+        }
     }
 
     return (
@@ -44,7 +48,7 @@ export default function Conversor() {
             {loading ? <div>loading...</div> : (
                 <>
                     <div className="conversor-content">
-                        <Cotation cotation={currency.bid}/>
+                        <Cotation cotation={MoneyUtil.formatBRLValue(currency.bid)}/>
                         <Form>
                             <div className="input-text">
                                 <img src={Usa} alt="Bandeira dos Estados Unidos"/>
