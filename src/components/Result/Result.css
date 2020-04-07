@@ -14,7 +14,7 @@
     margin: 20px 0;
     padding: 20px;
     border-radius: 8px;
-    width: 70%;
+    min-width: 70%;
     background-color: #fff;
 
     display: flex;

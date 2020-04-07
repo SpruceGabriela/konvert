@@ -23,6 +23,24 @@
     align-items: center;
 }
 
+
+
+.input-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    padding: 20px 0;
+    width: 60%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .result-container {
     width: 100%;
     min-height: 500px;
@@ -54,6 +72,15 @@
 
     .conversor-content {
         border-radius: 8px 8px 0 0;
+    }
+
+    .input-group {
+        padding: 8px 0;
+        width: 60%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .result-container {
