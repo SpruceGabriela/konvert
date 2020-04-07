@@ -5,10 +5,12 @@ import './RadioButton.css';
 export default function RadioButton(props) {
     return (
         <input
-            className="radio-button"
             type="radio"
+            className="radio-button"
             value={props.value}
             id={props.id}
+            name={props.name}
+            onChange={props.onChange}
         />
     );
 }
